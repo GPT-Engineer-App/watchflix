@@ -6,11 +6,11 @@ const Index = () => {
   const navigate = useNavigate();
 
   const handlePlayClick = () => {
-    alert("Play button clicked!");
+    navigate("/play");
   };
 
   const handleMoreInfoClick = () => {
-    alert("More Info button clicked!");
+    navigate("/more-info");
   };
   return (
     <Container maxW="container.xl" p={0}>
