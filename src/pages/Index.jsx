@@ -1,7 +1,17 @@
 import { Box, Container, VStack, HStack, Text, Image, Button, IconButton, Input, InputGroup, InputRightElement } from "@chakra-ui/react";
 import { FaSearch, FaPlay, FaInfoCircle } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
+  const navigate = useNavigate();
+
+  const handlePlayClick = () => {
+    alert("Play button clicked!");
+  };
+
+  const handleMoreInfoClick = () => {
+    alert("More Info button clicked!");
+  };
   return (
     <Container maxW="container.xl" p={0}>
       {/* Header */}
@@ -35,10 +45,10 @@ const Index = () => {
           </Text>
           <Text maxW="600px">This is a brief description of the movie. It gives an overview of the plot and entices viewers to watch it.</Text>
           <HStack spacing={4}>
-            <Button leftIcon={<FaPlay />} colorScheme="red">
+            <Button leftIcon={<FaPlay />} colorScheme="red" onClick={handlePlayClick}>
               Play
             </Button>
-            <Button leftIcon={<FaInfoCircle />} colorScheme="gray">
+            <Button leftIcon={<FaInfoCircle />} colorScheme="gray" onClick={handleMoreInfoClick}>
               More Info
             </Button>
           </HStack>
